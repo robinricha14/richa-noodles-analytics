@@ -1,30 +1,24 @@
 # Noodles Crypto Analytics — Task 9 Portfolio Project
 
-An end-to-end Business Intelligence and Data Analytics project that transforms fragmented cryptocurrency market and social-engagement data into a trusted analytics platform and executive-ready Power BI dashboards.
+## Public GitHub Repository
+
+**https://github.com/robinricha14/richa-noodles-analytics**
+
+The repository is **public** and is the canonical location for the Task 9 portfolio submission.
 
 ## Project Overview
 
-The solution demonstrates the full analytics lifecycle:
+An end-to-end Business Intelligence and Data Analytics project that transforms fragmented cryptocurrency market and social-engagement data into a trusted analytics platform and executive-ready Power BI dashboards.
 
 **Source data → Python ETL → MySQL data warehouse → reporting views → Power BI dashboards → executive insights**
 
-The project combines Python-based data preparation, dimensional data modeling, SQL/MySQL warehousing, DAX, and Power BI to support analysis of cryptocurrency performance and social engagement across Twitter and Reddit.
-
-### Business objectives
+## Business Objectives
 
 - Create a reliable, centralized analytics foundation for crypto data.
 - Compare engagement and performance across platforms and currencies.
 - Identify top-performing assets and momentum patterns.
 - Provide interactive executive dashboards for faster decision-making.
 - Document the solution so another analyst can understand and reproduce the workflow.
-
-## Key Outcomes
-
-- Built a star-schema warehouse with currency, date, and platform dimensions.
-- Created fact and reporting views for market and social analytics.
-- Added validation and data-quality checks to the preparation workflow.
-- Developed interactive Power BI dashboards with KPIs, time-series analysis, platform comparisons, and currency drill-through.
-- Documented the technical architecture, data dictionary, DAX measures, runbook, and stakeholder usage.
 
 ## Technology Stack
 
@@ -58,44 +52,26 @@ See [`docs/technical-runbook.md`](docs/technical-runbook.md).
 
 ## Data Model
 
-The analytics model uses a dimensional structure centered on:
+The dimensional model includes currency, date, and platform dimensions, market/activity facts, social-engagement facts, reporting views, and aggregation outputs. The data dictionary is designed to document source files, dimensions, facts, aggregation tables, fields, data types, keys, and business meaning.
 
-- `DimCurrency`
-- `DimDate`
-- `DimPlatform`
-- `FactSocialEngagement`
-- market/activity fact data
-- reporting and aggregation views
-
-The model supports time-based analysis, platform comparisons, currency-level drill-down, and reusable Power BI measures.
-
-The expanded data dictionary is available at [`docs/data-dictionary.xlsx`](docs/data-dictionary.xlsx).
+See [`docs/data-dictionary.xlsx`](docs/data-dictionary.xlsx).
 
 ## Power BI Dashboards
 
-### Executive Dashboard
+- [`powerBI/NoodlesCrypto_ExecutiveDashboard.pbix`](powerBI/NoodlesCrypto_ExecutiveDashboard.pbix) — executive KPIs, market and engagement trends, platform performance, currency analysis, and drill-through.
+- [`powerBI/NoodlesCrypto_TopPerformers.pbix`](powerBI/NoodlesCrypto_TopPerformers.pbix) — Top-N analysis, rankings, engagement performance, platform share, and filtering.
 
-[`powerBI/NoodlesCrypto_ExecutiveDashboard.pbix`](powerBI/NoodlesCrypto_ExecutiveDashboard.pbix)
-
-Focuses on executive KPIs, market and engagement trends, platform performance, currency-level analysis, and drill-through exploration.
-
-### Top Performers
-
-[`powerBI/NoodlesCrypto_TopPerformers.pbix`](powerBI/NoodlesCrypto_TopPerformers.pbix)
-
-Focuses on Top-N analysis, engagement performance, ranking, platform share, and interactive filtering.
-
-Dashboard screenshots are available in [`screenshots/`](screenshots/).
+Dashboard screenshots are provided in [`screenshots/`](screenshots/).
 
 ## Key Insights
 
-- Bitcoin remains an influential reference point for overall market movement.
-- Social engagement can provide a useful signal for attention and momentum.
+- Bitcoin provides an important reference point for overall market movement.
+- Social engagement can be used as an attention and momentum signal alongside market measures.
 - Platform-level comparisons reveal differences in engagement behavior.
-- Currency drill-down makes it easier to investigate individual assets.
-- A centralized warehouse and validated reporting views improve consistency between raw data and executive reporting.
+- Currency drill-through helps analysts investigate individual assets and their associated activity.
+- A centralized warehouse and validated reporting views improve consistency between source data and executive reporting.
 
-These findings are analytical observations from the project dataset rather than investment recommendations.
+These are observations from the project dataset and are not investment recommendations.
 
 ## Setup
 
@@ -106,11 +82,8 @@ These findings are analytical observations from the project dataset rather than 
 - MySQL
 - Power BI Desktop
 - MySQL/ODBC connectivity
-- Required Python packages used by the notebooks
 
 ### Python environment
-
-Example Windows setup:
 
 ```powershell
 python -m venv .venv
@@ -120,55 +93,59 @@ pip install pandas sqlalchemy pymysql python-dotenv matplotlib seaborn jupyter
 
 ### Data preparation
 
-Open `scripts/06_powerbi_prep.ipynb` and run the documented preparation and validation workflow. For warehouse design, see `scripts/Task5–Design_Your_Data_Warehouse.ipynb`.
+Run `scripts/06_powerbi_prep.ipynb` and its validation cells. For warehouse design, see `scripts/Task5–Design_Your_Data_Warehouse.ipynb`.
 
 ### MySQL
 
-The project expects a MySQL database named `noodles_dw`. Connection credentials should be supplied through the local environment rather than committed to GitHub.
-
-See [`docs/technical-runbook.md`](docs/technical-runbook.md) for refresh, validation, troubleshooting, and recovery procedures.
+The project expects a MySQL database named `noodles_dw`. Credentials must be supplied locally and must not be committed to GitHub.
 
 ### Power BI
 
-1. Open the required `.pbix` file from `powerBI/`.
-2. Configure the MySQL/ODBC data source for the local environment.
+1. Open the appropriate `.pbix` report from `powerBI/`.
+2. Configure the local MySQL/ODBC source.
 3. Refresh the model.
-4. Verify dashboard visuals, filters, relationships, and drill-through behavior.
+4. Verify visuals, filters, relationships, and drill-through.
 
 ## Documentation
 
 | Document | Purpose |
 |---|---|
 | [`docs/architecture-diagram.png`](docs/architecture-diagram.png) | End-to-end technical architecture |
-| [`docs/data-dictionary.xlsx`](docs/data-dictionary.xlsx) | Source files, dimensions, facts, aggregations, and fields |
+| [`docs/data-dictionary.xlsx`](docs/data-dictionary.xlsx) | Source files, dimensions, facts, aggregation tables, and fields |
 | [`docs/technical-runbook.md`](docs/technical-runbook.md) | ETL, refresh, validation, troubleshooting |
-| [`docs/user-guide.md`](docs/user-guide.md) | Dashboard usage for non-technical stakeholders |
+| [`docs/user-guide.md`](docs/user-guide.md) | Dashboard guide for non-technical stakeholders |
 | [`docs/demo-presentation.pptx`](docs/demo-presentation.pptx) | 12-slide portfolio/demo presentation |
-| [`docs/demo-video.mp4`](docs/demo-video.mp4) | Approximately 10-minute recorded walkthrough |
-| [`docs/final-checklist.md`](docs/final-checklist.md) | Final submission checklist |
-| [`docs/powerbi-report-guide.md`](docs/powerbi-report-guide.md) | Power BI report walkthrough |
+| [`docs/demo-video.mp4`](docs/demo-video.mp4) | Final approximately 10-minute walkthrough |
 | [`docs/dax-measures-list.md`](docs/dax-measures-list.md) | DAX measure inventory |
 | [`docs/dax-measures-reference.md`](docs/dax-measures-reference.md) | DAX definitions and explanations |
 | [`docs/executive-dashboard-guide.md`](docs/executive-dashboard-guide.md) | Executive dashboard guide |
-| [`docs/portfolio.md`](docs/portfolio.md) | Portfolio presentation |
+| [`docs/portfolio.md`](docs/portfolio.md) | Portfolio presentation material |
 | [`docs/linkedIn_draft.md`](docs/linkedIn_draft.md) | LinkedIn post draft |
+| [`docs/final-checklist.md`](docs/final-checklist.md) | Final submission checklist |
 | [`docs/task9-feedback-resolution.md`](docs/task9-feedback-resolution.md) | Assessment feedback resolution |
 
-## Demo
+## Demo Video — Required Coverage
 
-The final demo recording is [`docs/demo-video.mp4`](docs/demo-video.mp4) and has been extended to approximately 10 minutes. The walkthrough covers the project objective, architecture and data flow, data warehouse/model, ETL and validation, Power BI model, dashboards, drill-through analysis, key insights, and technical implementation.
+The final recording must be approximately **10 minutes** and explicitly cover:
 
-The accompanying [`docs/demo-presentation.pptx`](docs/demo-presentation.pptx) contains the 12-slide presentation structure required for the portfolio demonstration.
+1. Project objective and business problem
+2. Technical architecture
+3. End-to-end data flow
+4. Source data and warehouse/data model
+5. ETL workflow and data-quality validation
+6. Power BI semantic model and relationships
+7. Executive dashboard
+8. Time-series and platform analysis
+9. Currency drill-through/dashboard exploration
+10. Key business insights and technical skills demonstrated
 
-## GitHub Repository
+The prepared project package contains the recorded walkthrough and supporting screenshots/presentation. Before resubmission, verify that the final ~10-minute video is uploaded to `docs/demo-video.mp4` in the public GitHub repository.
 
-**Public repository:** https://github.com/robinricha14/richa-noodles-analytics
+## LinkedIn
 
-The repository is public. Do not commit credentials, `.env` files, database passwords, or other secrets.
+The LinkedIn draft highlights the end-to-end analytics lifecycle, Python ETL, MySQL dimensional modeling, Power BI, DAX, validation, dashboard storytelling, and stakeholder-focused reporting.
 
-## LinkedIn Post
-
-A ready-to-use LinkedIn post is included in [`docs/linkedIn_draft.md`](docs/linkedIn_draft.md), highlighting the project's BI, ETL, data-modeling, DAX, Power BI, and documentation work.
+See [`docs/linkedIn_draft.md`](docs/linkedIn_draft.md).
 
 ## Portfolio Skills Demonstrated
 
@@ -183,21 +160,22 @@ A ready-to-use LinkedIn post is included in [`docs/linkedIn_draft.md`](docs/link
 - Technical documentation
 - Stakeholder-oriented reporting
 
-## Final Submission Checklist
+## Final Resubmission Checklist
 
-- [x] README includes the public GitHub repository URL.
-- [x] GitHub repository is public.
-- [x] Architecture diagram included.
-- [x] Data dictionary included in the project package.
-- [x] Technical runbook included.
-- [x] Stakeholder user guide included.
-- [x] 12-slide demo presentation included in the project package.
-- [x] Demo video extended to approximately 10 minutes in the project package.
-- [x] LinkedIn post draft included.
-- [x] Relative README links point to the intended repository paths.
-- [ ] Verify the final binary artifacts are present on GitHub before resubmission.
-- [ ] If the assessor requires a separately hosted demo-video URL, add that hosted URL after uploading the final recording.
+- [x] Public GitHub repository URL included at the top of README.
+- [x] Repository visibility verified as **public**.
+- [x] README contains repository-relative links for the required deliverables.
+- [x] Technical runbook included in the prepared submission package.
+- [x] User guide included in the prepared submission package.
+- [x] Data dictionary included in the prepared submission package.
+- [x] 12-slide demo presentation included in the prepared submission package.
+- [x] Dashboard screenshots included in the prepared submission package.
+- [ ] Verify `docs/data-dictionary.xlsx` is present on GitHub.
+- [ ] Verify `docs/demo-presentation.pptx` is present on GitHub.
+- [ ] Verify `docs/demo-video.mp4` is present on GitHub and is approximately 10 minutes.
+- [ ] Verify the `.pbix` files and screenshots are present on GitHub.
+- [ ] Open every README link from the public GitHub page before resubmission.
 
-## License / Portfolio Use
+## Security
 
-This project is presented as a portfolio and educational analytics project. Add an appropriate license before public publication if required by the course, organization, or source-data terms.
+Never commit passwords, `.env` files, API keys, database credentials, or other secrets.
