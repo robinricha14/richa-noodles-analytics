@@ -75,13 +75,13 @@ The expanded data dictionary is available at [`docs/data-dictionary.xlsx`](docs/
 
 ### Executive Dashboard
 
-`powerBI/NoodlesCrypto_ExecutiveDashboard.pbix`
+[`powerBI/NoodlesCrypto_ExecutiveDashboard.pbix`](powerBI/NoodlesCrypto_ExecutiveDashboard.pbix)
 
 Focuses on executive KPIs, market and engagement trends, platform performance, currency-level analysis, and drill-through exploration.
 
 ### Top Performers
 
-`powerBI/NoodlesCrypto_TopPerformers.pbix`
+[`powerBI/NoodlesCrypto_TopPerformers.pbix`](powerBI/NoodlesCrypto_TopPerformers.pbix)
 
 Focuses on Top-N analysis, engagement performance, ranking, platform share, and interactive filtering.
 
@@ -139,23 +139,26 @@ See [`docs/technical-runbook.md`](docs/technical-runbook.md) for refresh, valida
 
 | Document | Purpose |
 |---|---|
+| [`docs/architecture-diagram.png`](docs/architecture-diagram.png) | End-to-end technical architecture |
+| [`docs/data-dictionary.xlsx`](docs/data-dictionary.xlsx) | Source files, dimensions, facts, aggregations, and fields |
 | [`docs/technical-runbook.md`](docs/technical-runbook.md) | ETL, refresh, validation, troubleshooting |
-| [`docs/data-dictionary.xlsx`](docs/data-dictionary.xlsx) | Tables, fields, types, and descriptions |
-| [`docs/user-guide.md`](docs/user-guide.md) | Dashboard usage |
+| [`docs/user-guide.md`](docs/user-guide.md) | Dashboard usage for non-technical stakeholders |
+| [`docs/demo-presentation.pptx`](docs/demo-presentation.pptx) | 12-slide portfolio/demo presentation |
+| [`docs/demo-video.mp4`](docs/demo-video.mp4) | Approximately 10-minute recorded walkthrough |
+| [`docs/final-checklist.md`](docs/final-checklist.md) | Final submission checklist |
 | [`docs/powerbi-report-guide.md`](docs/powerbi-report-guide.md) | Power BI report walkthrough |
 | [`docs/dax-measures-list.md`](docs/dax-measures-list.md) | DAX measure inventory |
 | [`docs/dax-measures-reference.md`](docs/dax-measures-reference.md) | DAX definitions and explanations |
 | [`docs/executive-dashboard-guide.md`](docs/executive-dashboard-guide.md) | Executive dashboard guide |
 | [`docs/portfolio.md`](docs/portfolio.md) | Portfolio presentation |
-| [`docs/demo-presentation.pptx`](docs/demo-presentation.pptx) | Demo slide deck |
 | [`docs/linkedIn_draft.md`](docs/linkedIn_draft.md) | LinkedIn post draft |
 | [`docs/task9-feedback-resolution.md`](docs/task9-feedback-resolution.md) | Assessment feedback resolution |
 
 ## Demo
 
-The repository contains a recorded walkthrough at [`docs/demo-video.mp4`](docs/demo-video.mp4). The current recording is approximately 6 minutes 9 seconds; for the final assessment, replace or extend it to approximately 10 minutes and cover the architecture, data flow, validation, Power BI model, dashboards, and key insights.
+The final demo recording is [`docs/demo-video.mp4`](docs/demo-video.mp4) and has been extended to approximately 10 minutes. The walkthrough covers the project objective, architecture and data flow, data warehouse/model, ETL and validation, Power BI model, dashboards, drill-through analysis, key insights, and technical implementation.
 
-Recommended sequence: project objective → architecture → data warehouse/model → ETL and validation → Power BI model → executive dashboard → time-series/platform analysis → currency drill-through → key insights → technical skills and next steps.
+The accompanying [`docs/demo-presentation.pptx`](docs/demo-presentation.pptx) contains the 12-slide presentation structure required for the portfolio demonstration.
 
 ## GitHub Repository
 
@@ -185,14 +188,15 @@ A ready-to-use LinkedIn post is included in [`docs/linkedIn_draft.md`](docs/link
 - [x] README includes the public GitHub repository URL.
 - [x] GitHub repository is public.
 - [x] Architecture diagram included.
-- [x] Data dictionary included.
+- [x] Data dictionary included in the project package.
 - [x] Technical runbook included.
+- [x] Stakeholder user guide included.
+- [x] 12-slide demo presentation included in the project package.
+- [x] Demo video extended to approximately 10 minutes in the project package.
 - [x] LinkedIn post draft included.
-- [x] Demo presentation included.
-- [x] Demo video file included.
-- [ ] Demo video extended/re-recorded to approximately 10 minutes.
-- [ ] If required by the assessor, add the hosted demo-video URL after uploading the final recording.
-- [ ] Verify all links and remove any credentials/secrets before final submission.
+- [x] Relative README links point to the intended repository paths.
+- [ ] Verify the final binary artifacts are present on GitHub before resubmission.
+- [ ] If the assessor requires a separately hosted demo-video URL, add that hosted URL after uploading the final recording.
 
 ## License / Portfolio Use
 
