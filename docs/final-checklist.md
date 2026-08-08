@@ -1,37 +1,61 @@
 # Final Project Checklist
 
-## Task 9 required deliverables
+## Code & Scripts
 
-- [x] `README.md` — portfolio overview, setup, insights, documentation and repository links
-- [x] `docs/architecture-diagram.png` — end-to-end architecture artifact in the project package
-- [x] `docs/data-dictionary.xlsx` — source, staging, dimensions, facts, aggregations and Python-function documentation in the project package
-- [x] `docs/technical-runbook.md` — operational and troubleshooting guide
-- [x] `docs/user-guide.md` — stakeholder-facing dashboard guide
-- [x] `docs/demo-presentation.pptx` — 12-slide portfolio presentation in the project package
-- [x] `docs/demo-video.mp4` — extended recording of approximately 10 minutes in the project package
-- [x] `docs/linkedIn_draft.md` — portfolio LinkedIn draft
+- [ ] All Python scripts execute without errors
+- [ ] Dependencies documented
+- [ ] SQL/data warehouse workflow documented
+- [ ] ETL pipeline runs end-to-end
+- [ ] Validation scripts pass all checks
 
-## Power BI and analytics
+## Data Quality
 
-- [x] Executive Dashboard report included
-- [x] Top Performers report included
-- [x] Dashboard screenshots included in the project package
-- [x] Star-schema dimensions and facts documented
-- [x] Validation and data-quality workflow documented
-- [x] Dashboard navigation, filtering and drill-through documented
+- [ ] Data quality results verified and documented
+- [ ] No orphaned facts
+- [ ] Referential integrity maintained
+- [ ] SCD Type 2 behavior verified where applicable
+- [ ] Reject/error handling documented
 
-## Repository verification
+## Power BI
 
-- [x] Public repository: `robinricha14/richa-noodles-analytics`
-- [x] README uses repository-relative links for Task 9 artifacts
-- [ ] Confirm the binary artifacts have been pushed to the GitHub `main` branch before final resubmission
-- [ ] Confirm the demo video opens and plays from GitHub after upload
-- [ ] Remove any credentials, `.env` files, passwords or secrets before resubmission
+- [ ] Dashboards load successfully
+- [ ] All visuals display data
+- [ ] Cross-filtering works
+- [ ] Drill-through configured
+- [ ] Bookmarks/parameters verified
+- [ ] Published to Power BI Service if required
+- [ ] Scheduled refresh configured if required
 
-## Assessor feedback addressed
+## Documentation
 
-1. Data dictionary: supplied and documented.
-2. User guide: supplied and written for non-technical stakeholders.
-3. Demo duration: extended from approximately 6:09 to approximately 10:00 in the final project package.
-4. Demo presentation: supplied as a 12-slide PowerPoint.
-5. README links: updated to the intended repository-relative paths.
+- [x] Root README expanded with overview, setup, insights, documentation links, demo status, and GitHub placeholder
+- [x] Technical runbook included
+- [x] User guide included
+- [x] Data dictionary included
+- [x] Architecture diagram included
+- [x] LinkedIn post draft included
+- [ ] Final README updated with the live public GitHub URL
+- [ ] Final README updated with the hosted demo-video URL, if required
+
+## Presentation
+
+- [x] Demo presentation included
+- [x] Demo video included
+- [ ] Demo video extended/re-recorded to approximately 10 minutes
+- [ ] Demo covers architecture, data flow, validation, dashboards, and key insights
+- [ ] Performance benchmarks verified and documented
+
+## Portfolio
+
+- [ ] GitHub repository made public
+- [x] Professional README prepared
+- [x] Screenshots included
+- [x] Demo video file included
+- [x] LinkedIn post drafted
+
+## Final Release Checks
+
+- [ ] Remove credentials, passwords, `.env` files, and other secrets before publishing
+- [ ] Verify all relative links from the root README
+- [ ] Test the public GitHub repository in an incognito/private browser
+- [ ] Confirm the final demo link works without requesting private access

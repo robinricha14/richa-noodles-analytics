@@ -2,134 +2,138 @@
 
 ## Overview
 
-This guide explains how to use the Noodles Crypto Analytics dashboards for market-insight exploration and stakeholder decision-making. No programming knowledge is required for normal dashboard use.
+This guide explains how to access and use the Noodles currency analytics dashboards for market insights and decision-making.
 
-## Accessing the dashboards
+## Accessing Dashboards
 
-### Power BI Desktop
+**Option 1: Power BI Service (Recommended)**
 
-1. Open the required `.pbix` file from `powerBI/`.
-2. Confirm the local MySQL/ODBC connection is configured.
-3. Select **Home → Refresh** when a current dataset is required.
-4. Use the report tabs, slicers, visuals, and drill-through features described below.
+1. Visit: https://app.powerbi.com
+2. Sign in with your organizational account
+3. Navigate to "Noodles Analytics" workspace
+4. Open "Executive Dashboard" report
 
-### Power BI Service
+**Option 2: Power BI Desktop**
 
-If the reports have been published to an organization's Power BI workspace, sign in to Power BI Service and open the Noodles Analytics report. Check the **Last Refresh** timestamp before relying on current figures.
+1. Download the .pbix file from the shared folder
+2. Open with Power BI Desktop
+3. Click "Refresh" to load the latest data
 
-## Available dashboards
+## Available Dashboards
 
 ### 1. Executive Dashboard
 
-**Purpose:** Provide a high-level view of market and engagement performance.
+**Purpose**: High-level market overview for executives
 
-Use it to:
-- Review headline KPIs.
-- Compare market and engagement trends over time.
-- Filter the analysis by date and other available dimensions.
-- Identify areas that need deeper investigation.
+**Key Metrics**:
+- Total Market Capitalization
+- Average Price Across Currencies
+- Trading Volume (24h)
+- Number of Active Currencies
 
-**How to use it:**
-1. Set the required date range with the date slicer.
-2. Select a visual to cross-filter related visuals.
-3. Hover over chart points for tooltips.
-4. Use drill-through where available to investigate a selected currency.
+**How to Use**:
+- Use the date slicer to select a time period
+- Click any visual to filter other visuals
+- Hover over data points for detailed tooltips
 
 ### 2. Top Performers Report
 
-**Purpose:** Identify relative winners, losers, and high-engagement currencies.
+**Purpose**: Identify market winners and losers
 
-Use it to:
-- Review Top-N currencies.
-- Compare rankings and performance.
-- Identify volume and engagement leaders.
-- Drill into a specific currency.
+**Features**:
+- Top Gainers table
+- Top Losers table
+- Volume leaders
+- Price trend indicators
 
-**How to use it:**
-1. Adjust the Top-N control if available.
-2. Select a currency or visual category to filter the page.
-3. Use the context menu (`...`) when export is enabled.
-4. Drill through to currency-level details where configured.
+**How to Use**:
+- Adjust the Top N parameter
+- Right-click any currency for drill-through details
+- Export data using the ellipsis menu
 
-### 3. Currency / Deep-Dive Analysis
+### 3. Currency Deep Dive
 
-**Purpose:** Investigate one currency in more detail.
+**Purpose**: Detailed analysis of individual currencies
 
-Typical views include:
-- Price or market trends.
-- Trading activity.
-- Social engagement.
-- Historical comparisons.
+**Features**:
+- Price trends with moving averages
+- Volume analysis
+- Social engagement metrics
+- Historical comparisons
 
-Use a currency selector or drill-through from another report page.
+**How to Use**:
+- Access via drill-through from other reports
+- Use the currency selector dropdown
+- Compare multiple currencies using Ctrl+Click
 
-## Common tasks
+## Common Tasks
 
-### Filter by date
+### Filter by Date Range
 
-1. Locate the date slicer.
-2. Select a start and end date.
-3. Use relative-date options where available, such as a recent period or year-to-date.
+1. Locate the date slicer
+2. Click the calendar icon
+3. Select start and end dates
+4. Or use relative date filters
 
-### Cross-filter a dashboard
+### Export Data
 
-Click a bar, line, KPI category, or table row. Power BI will highlight or filter related visuals when interactions are configured.
+1. Click the ellipsis menu on a visual
+2. Select "Export data"
+3. Choose .xlsx or .json
+4. Open in Excel for analysis
 
-### Drill through
+### Print/Export Report
 
-Right-click a supported currency or data point and choose the available drill-through page. Use the back button to return to the originating report page.
+1. File → Export → PDF
+2. Select pages to export
+3. Save to your desired location
 
-### Export data
+### Share with Colleagues
 
-If enabled by the report permissions:
-1. Select the visual's `...` menu.
-2. Choose **Export data**.
-3. Select the available export format.
-4. Review the exported data before using it outside the report.
+1. Click "Share"
+2. Enter email addresses
+3. Set permissions
+4. Add a message and send
 
-### Export or print a report
+## Understanding Key Metrics
 
-Use the Power BI export/print options available in your environment. Confirm that filters are set correctly before exporting.
+| Metric | What It Means | How to Use |
+| --- | --- | --- |
+| Market Cap | Total value of all coins | Gauge market size |
+| 24h Volume | Trading activity | Identify liquidity |
+| Price Change % | Price movement | Spot trends |
+| Moving Average | Smoothed direction | Identify trend direction |
+| Volatility | Price stability | Assess risk |
 
-## Understanding key metrics
+## Tips & Best Practices
 
-| Metric | Meaning | Typical use |
-|---|---|---|
-| Market capitalization | Aggregate market value represented by the dataset | Understand market scale |
-| 24h volume | Recent trading activity | Compare liquidity/activity |
-| Price change % | Percentage movement over the selected period | Spot directional movement |
-| Moving average | Smoothed time-series measure | Identify broader trends |
-| Volatility | Degree of price variation | Compare stability/risk characteristics |
-| Social engagement | Activity from supported social platforms | Measure attention and momentum |
+✅ **DO**:
+- Refresh data before meetings
+- Use filters to focus analysis
+- Export data for offline review
+- Share insights with team
 
-## Dashboard tips
+❌ **DON'T**:
+- Rely on stale data
+- Ignore warnings
+- Share sensitive reports externally
 
-**Do:**
-- Check the refresh timestamp before important analysis.
-- Use filters to narrow the question you are investigating.
-- Validate surprising results by drilling into the underlying currency or platform.
-- Keep the report's date range visible when sharing screenshots or exports.
+## FAQ
 
-**Don't:**
-- Treat stale data as current market information.
-- Assume correlation proves causation.
-- Share confidential report data outside approved channels.
-- Treat dashboard observations as investment advice.
+**Q: How often is data updated?**
+A: Daily at 6:00 AM. Check the "Last Refresh" timestamp.
 
-## Troubleshooting
+**Q: Why do I see different numbers than yesterday?**
+A: Data is refreshed daily and historical values may change.
 
-### A visual is blank
+**Q: Can I build my own report?**
+A: Yes, with a Power BI Pro license. Contact IT for access.
 
-Check the selected filters, date range, and data-source refresh status. If the report is connected to a local MySQL source, verify the connection before refreshing.
-
-### Values look different from an earlier report
-
-The dataset may have been refreshed or historical records may have changed. Compare the report's refresh timestamp and selected filters.
-
-### Refresh fails
-
-Follow `docs/technical-runbook.md` for database, ODBC, validation, and Power BI troubleshooting steps.
+**Q: Who do I contact for questions?**
+A: Email data-analytics@noodles.com or Slack #data-help
 
 ## Support
 
-For technical questions, use the project owner or course/team support channel associated with the deployment. Do not place credentials or secrets in the public GitHub repository.
+- Email: support@noodles.com
+- Slack: #data-help
+- Phone: ext. 1234
